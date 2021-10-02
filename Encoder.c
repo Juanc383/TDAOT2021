@@ -15,7 +15,7 @@ static ERROR isString(char* message){
     }return TRUE;
 }
 
-Message newMessage(char* message){
+Message newMessageContainer(char* message){
     Message myMessage = NULL;
     myMessage = malloc(sizeof(Message));
     
