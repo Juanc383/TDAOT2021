@@ -8,7 +8,7 @@
 */
 
 #ifndef Encoder_H
-#define Encoder_H
+#define Encoder_H 
 /**
  * Give an error code IDE to test for encoding success or failure
  */ 
