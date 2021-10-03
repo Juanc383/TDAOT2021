@@ -45,14 +45,5 @@ ERROR setMessage(Message frame, char* string);
  * @param[out] message starting pointer.
  */ 
 char* getMessage(Message frame);
-/**
- * Encodes a given message contained within a frame by an offset. 
- * 
- * @param[in] frame object whose string is to be encoded.
- * @param[in] offset type encoding.
- * 
- * @returns ERROR CODE.
- */ 
-ERROR encodeMessage(Message frame, size_t offset);
 
 #endif

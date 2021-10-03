@@ -1,0 +1,72 @@
+\hypertarget{_encoder_8c}{}\doxysection{Encoder.\+c File Reference}
+\label{_encoder_8c}\index{Encoder.c@{Encoder.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Encoder.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__frame}{\+\_\+frame}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_encoder_8h_a5df8576addca47c9b14391c670748cd7}{Message}} \mbox{\hyperlink{_encoder_8c_ac5b9f9c47eb2606846db024fd94f4dc2}{new\+Message\+Container}} (char $\ast$message)
+\item 
+char $\ast$ \mbox{\hyperlink{_encoder_8c_abf68d363755f89b4cfbb25e858443455}{get\+Message}} (\mbox{\hyperlink{_encoder_8h_a5df8576addca47c9b14391c670748cd7}{Message}} frame)
+\item 
+\mbox{\hyperlink{_encoder_8h_a9eaada089c4de774cfc8b7aea4b9379a}{ERROR}} \mbox{\hyperlink{_encoder_8c_a05093ec50d1700363d617e4961095af6}{set\+Message}} (\mbox{\hyperlink{_encoder_8h_a5df8576addca47c9b14391c670748cd7}{Message}} frame, char $\ast$string)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_encoder_8c_abf68d363755f89b4cfbb25e858443455}\label{_encoder_8c_abf68d363755f89b4cfbb25e858443455}} 
+\index{Encoder.c@{Encoder.c}!getMessage@{getMessage}}
+\index{getMessage@{getMessage}!Encoder.c@{Encoder.c}}
+\doxysubsubsection{\texorpdfstring{getMessage()}{getMessage()}}
+{\footnotesize\ttfamily char $\ast$ get\+Message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_encoder_8h_a5df8576addca47c9b14391c670748cd7}{Message}}}]{frame }\end{DoxyParamCaption})}
+
+Returns a given char$\ast$ reference to the string within a frame object.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em frame} & object to be analised. \\
+\hline
+\mbox{\texttt{ out}}  & {\em message} & starting pointer. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_encoder_8c_ac5b9f9c47eb2606846db024fd94f4dc2}\label{_encoder_8c_ac5b9f9c47eb2606846db024fd94f4dc2}} 
+\index{Encoder.c@{Encoder.c}!newMessageContainer@{newMessageContainer}}
+\index{newMessageContainer@{newMessageContainer}!Encoder.c@{Encoder.c}}
+\doxysubsubsection{\texorpdfstring{newMessageContainer()}{newMessageContainer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_encoder_8h_a5df8576addca47c9b14391c670748cd7}{Message}} new\+Message\+Container (\begin{DoxyParamCaption}\item[{char $\ast$}]{message }\end{DoxyParamCaption})}
+
+Constructs a new message container with a given string. If message = NULL -\/ then an empty container is returned.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em message} & to be stored within the container. ~\newline
+ \\
+\hline
+\mbox{\texttt{ out}}  & {\em Message} & created container reference. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_encoder_8c_a05093ec50d1700363d617e4961095af6}\label{_encoder_8c_a05093ec50d1700363d617e4961095af6}} 
+\index{Encoder.c@{Encoder.c}!setMessage@{setMessage}}
+\index{setMessage@{setMessage}!Encoder.c@{Encoder.c}}
+\doxysubsubsection{\texorpdfstring{setMessage()}{setMessage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_encoder_8h_a9eaada089c4de774cfc8b7aea4b9379a}{ERROR}} set\+Message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_encoder_8h_a5df8576addca47c9b14391c670748cd7}{Message}}}]{frame,  }\item[{char $\ast$}]{string }\end{DoxyParamCaption})}
+
+Sets a particular string message to a Message container module.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em frame} & objective to modify. \\
+\hline
+\mbox{\texttt{ in}}  & {\em string} & to be set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ERROR code. TRUE if was successfully set. FALSE otherwise. 
+\end{DoxyReturn}

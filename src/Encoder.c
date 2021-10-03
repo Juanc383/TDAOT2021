@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "Encoder.h"
+#include "../libs/Encoder.h"
 
 struct _frame{
     char* code;
@@ -37,6 +37,14 @@ ERROR setMessage(Message frame, char* string){
     if(string){strncpy(frame->code, string, BUFSIZ);
     return TRUE;}
     else return FALSE;
+}
+
+ERROR encodeMessage(Message frame, size_t offset){
+    if(!frame)return FALSE;
+    if(!frame->code)return FALSE;
+    for(int letter=0; letter<frame->length; letter++){
+        frame->code[letter]+=offset;
+    }return TRUE;
 }
 
 
